@@ -17,6 +17,15 @@ You will also need the following libraries:
 - boost
 - rapidxml
 
+Build the docker image
+```bash
+docker build -t mariogame .
+```
+Run it
+```bash
+docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/dri --device /dev/snd mariogame
+```
+
 Resources
 ---------
 These are needed to run the game in it's current form.
